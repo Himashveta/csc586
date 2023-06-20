@@ -1,0 +1,12 @@
+dn: ou=People,dc=wcupa,dc=edu
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Groups,dc=wcupa,dc=edu
+objectClass: organizationalUnit
+ou: Groups
+
+dn: cn=CSC,ou=Groups,dc=wcupa,dc=edu
+objectClass: posixGroup
+cn: CSC586
+gidNumber: 500
