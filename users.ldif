@@ -1,0 +1,16 @@
+dn: uid=student,ou=People,dc=wcupa,dc=edu
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: student
+sn: Ram
+givenName: Golden
+cn: student
+displayName: student
+uidNumber: 10000
+gidNumber: 5000
+userPassword: {SSHA}u7hR+YxwAx5xfEM+OWzXu/UEyE0ANqjb
+gecos: Golden Ram
+loginShell: /bin/dash
+homeDirectory: /home/student
+
