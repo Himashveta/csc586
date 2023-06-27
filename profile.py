@@ -9,15 +9,18 @@ prefixForIP = "192.168.1."
 link = request.LAN("lan")
 
 # Create a XenVM
-for i in range(3):
+for i in range(2):
   if i == 0:
     node = request.XenVM("webserver")
+    node.routable_control_ip = "true"
   elif i == 1: 
     node = request.XenVM("observer")
+    node.routable_control_ip = "false"
   else:
-    node = request.XenVM("ldap")       
+    node = request.XenVM("ldap")
+    node.routable_control_ip = "false"
 
-  webserver.routable_control_ip = "true"
+  
   node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU20-64-STD"
   iface = node.addInterface("if" + str(i))
   iface.component_id = "eth1"
