@@ -8,7 +8,7 @@ prefixForIP = "192.168.1."
 link = request.LAN("lan")
 
 # Create XenVMs
-for i in range(3):
+for i in range(2):
     if i == 0:
         node = request.XenVM("webserver")
         node.routable_control_ip = "true"
